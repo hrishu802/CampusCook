@@ -422,7 +422,7 @@ const updateRecipe = async (req, res) => {
 
 // @desc    Delete recipe
 // @route   DELETE /api/recipes/:id
-// @access  Private (Admin only)
+// @access  Private (Owner or Admin)
 const deleteRecipe = async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -434,11 +434,11 @@ const deleteRecipe = async (req, res) => {
       });
     }
 
-    // Only admins can delete recipes
-    if (req.user.role !== 'admin') {
+    // Check if user owns the recipe or is admin
+    if (recipe.author_id.toString() !== req.user.userId && req.user.role !== 'admin') {
       return res.status(403).json({
         error: 'Authorization Error',
-        message: 'Only administrators can delete recipes'
+        message: 'You do not have permission to delete this recipe'
       });
     }
 

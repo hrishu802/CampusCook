@@ -19,7 +19,7 @@ router.get('/:id', optionalAuth, getRecipeById);
 router.post('/', authenticateToken, createRecipe);
 router.put('/:id', authenticateToken, updateRecipe);
 
-// Admin only routes
-router.delete('/:id', authenticateToken, authorizeRole('admin'), deleteRecipe);
+// Delete route (owner or admin)
+router.delete('/:id', authenticateToken, deleteRecipe);
 
 module.exports = router;

@@ -88,14 +88,12 @@ function MyRecipes() {
                   >
                     Edit
                   </Link>
-                  {user.role === 'admin' && (
-                    <button
-                      onClick={() => handleDelete(recipe.id)}
-                      className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-                    >
-                      Delete
-                    </button>
-                  )}
+                  <button
+                    onClick={() => handleDelete(recipe.id)}
+                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             </div>
