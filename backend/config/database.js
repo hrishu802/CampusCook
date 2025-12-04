@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // MongoDB connection string
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/campuscook';
+const MONGODB_URI = process.env.MONGODB_URI ;
 
 // Connect to MongoDB
 const connectDB = async () => {
