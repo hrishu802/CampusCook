@@ -4,8 +4,8 @@ A Smart Recipe Management & Sharing System for College Students
 
 ## 🌐 Hosted Application
 
-**Frontend URL:** [Add your hosted frontend URL here]  
-**Backend API:** [Add your hosted backend URL here]
+**Frontend URL:** [https://campus-cook.vercel.app/]  
+**Backend API:** [https://campuscook.onrender.com]
 
 ---
 
